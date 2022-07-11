@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create Transaction</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles2.css' %}">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="icon" type=="image/x-icon" href="{% static 'images/favicon.ico' %}">
+  </head>
+  <body>
+    <section class="colored-section" id="title" style="height: 100px;background-color:#2D314D" >
+
+      <div class="container-fluid">
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="bottom: 25px;">
+
+          <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/banklogo.png' %}" style="height:70px;padding-right:40px;"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="margin-right:70px">
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="" style="
+    font-size: 15px;padding-left: 20px;
+">Banking▾</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""style="
+    font-size: 15px;padding-left: 20px;
+">Resources▾</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cta"style="
+    font-size: 15px;padding-left: 10px;padding-right:10px;
+">Mortgage<span style="color:#2D314D">_</span>Servicing▾</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cta"style="
+    font-size: 15px;padding-left: 20px;
+">Commercials▾</a>
+              </li>
+            </ul>
+          </div>
+          <form class="form-inline">
+            <input class="form-control srch" type="search" placeholder="Search" style="border-radius: 20px;" aria-label="Search">
+          </form>
+        </nav>
+        </section>
+        </div>
+        <section>
+          <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+          <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+              <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;height: 550px;">
+                  <div class="card-body p-4 p-md-5">
+<b><strong><h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="font-family: &quot;Montserrat&quot;;color: darkslategray;">Create Transaction</h3></b></strong>
+                      <form method="POST">
+                        {% csrf_token %}
+                      <div class="row">
+                        <div class="col-md-7 mb-4">
+
+                          <div class="form-outline">
+                            <input type="text" id="AccountName" name="AccountName" class="form-control form-control-lg" placeholder="Recipient Name" required>
+                          </div>
+
+                        </div>
+                        {% if messages %}
+                        <p>
+                        Recipient Name: {{Name}}
+                        </p>
+                        {% endif %}
+                      </div>
+
+                      <div class="row">
+                        <div class="">
+
+                          <div class="form-outline datepicker w-100">
+                            <select id="currency" name="currency" style="-webkit-mask-origin: border;margin-left: 18px;border-color: #bcbfc2;border-radius: 10%;height: 46.5px;width: 4-px;">
+                            <option value="USD">$</option>
+                            <option value="INR">₹</option>
+                            <option value="EUR">€</option>
+                            <option value="YEN">¥</option>
+                          </select>
+                          </div>
+
+                        </div>
+                        <div class="col-md-6 mb-4" style="padding-left: 1px;padding-right: 18px;">
+                          <div class="form-outline datepicker w-100">
+                            <input type="number" class="form-control form-control-lg" id="Amt" name="Amt" placeholder="Transaction Amount">
+                          </div>
+
+                        </div>
+                        {% if messages %}
+                        <p>
+                        Account No: {{AccountNum}}</p>
+                        {% endif %}
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-7 mb-4 pb-2">
+
+                          <div class="form-outline">
+                            <input type="text" id="AccountNumber" name="AccountNumber" class="form-control form-control-lg" placeholder="Recipient Account No." required minlength="10" maxlength="10">
+                          </div>
+
+                        </div>
+                        {% if messages %}
+                        <p style="margin-bottom: 0px;">
+                          <img src="{{qr}}" alt="Transaction qr code" width="170" style="margin-left: 50px;">
+                        </p>
+                        {% endif %}
+                      </div>
+
+                      <div class="mt-4 pt-2" style="padding-bottom: 16px;">
+                        <input class="btn2" type="submit" value="Create">
+                      </div>
+                      <p style="padding-top:20px">
+                      {% if messages %}
+                      {% for result in messages %}
+                      {% if result.tags == 'success' %}
+                      <b style="color:green;font-family: 'Montserrat';"></b>
+                      {% else %}
+                      <b style="color:red;;font-family: 'Montserrat';"></b>
+                      {% endif %}
+                      {% endfor %}
+                      {% endif %}
+                    </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</div >
+
+      <footer class="w-100 row justify-content-center align-items-center flex-direction-column pt-3 pt-md-5 pb-md-3 m-0 pr-md-3 pr-lg-0" style="background-color:#2D314D">
+        <div class="col-md-12 col-lg-10 offset-lg-1 d-md-flex m-0 p-md-0">
+        <div class=" col-12 col-md-7 d-md-flex">
+          <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center  justify-content-md-start align-items-md-start flex-md-column double-gutter-md-left-padding">
+              <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
+          <img src="{% static 'images/banklogo.png' %}" style="height:110px;padding-right:40px;">
+        <div class="w-100"></div>
+          </div>
+           <div class="col-md-3" style="color:white;">
+              <div class="w-100 row justify-content-center align-items-center flex-direction-column" style="color:white">
+          <a href="#" class="footer-link"style="color:white">About Us</a>
+          <a href="#" class="footer-link" style="color:white">Contact</a>
+        </div>
+          </div>
+           <div class="col-md-3">
+              <div class="w-100 row justify-content-center align-items-center flex-direction-column">
+          <a href="#" class="footer-link" style="color:white">Careers</a>
+          <a href="#" class="footer-link" style="color:white">Support</a>
+          <a href="#" class="footer-link" style="color:white">Privacy Policy</a>
+        </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 p-md-0">
+        <p id="copyright-text" class="text-center text-md-right color-grayish-blue" style="padding-top:70px;">© Sterling Bank. All Rights Reserved</p>
+        </div>
+      </div>
+  </body>
+</html>

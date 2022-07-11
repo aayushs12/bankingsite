@@ -1,0 +1,542 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bank</title>
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles3.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+<link rel="icon" type=="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+  </head>
+  <body style="margin:0px;">
+
+    <script type="text/javascript" src="{% static 'scripts/menu.js' %}"></script>
+    <!--Navigation Var-->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#2D314D">
+      <a class="navbar-brand" href="#"><img src="{% static 'images/banklogo.png' %}" style="height:70px;padding-right:40px;"></a>
+
+      <!--Toggle Collapse Button-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--Division for navbar-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!--UL for links-->
+        <ul class="navbar-nav mr-auto">
+
+         <!-- Category 1-->
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle catogary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
+    padding-right: 30px;
+">
+              Banking
+            </a>
+
+    <!--Div for category 1-->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="container">
+                <div class="row">   <!--Row 1-->
+                  <div class="col-md-3"> <!--Column 1-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Checking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Select Checking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Simply Right Checking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Student Value Checking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Basic Checking</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                  <div class="col-md-3">  <!--Column 2-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Savings</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Select Money Market Savings</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Money Market Savings</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link i" href="#">Savings</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                    <div class="col-md-3">  <!--Column 3-->
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                       <a class="nav-link active" href="#">Youth Savings</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link i" href="#">Certificates of Deposit (CDs)</a>
+                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Personal Loans</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link i" href="#">Deposit</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Equity</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link i" href="#">Line of Credit</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Mortgages</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                    <div class="col-md-3">  <!--Column 4-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Home loans</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Student loans</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link i" href="#">Loan against property</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Loan against Mutual Funds</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+
+               <!-- Category 2-->
+       <li class="nav-item dropdown">
+
+         <a class="nav-link dropdown-toggle catogary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
+ padding-right: 30px;
+">             Resources
+            </a>
+
+            <!--Div for catogary 2-->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="container">
+                <div class="row"> <!--Row 1-->
+                  <div class="col-md-3"> <!--Column 1-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Checking and Savings Resources</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">How to Open a Checking Account</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Order Checks</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Direct Deposit</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Checking FAQ</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                  <div class="col-md-3"> <!--Column 2-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Online Banking Resources</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">How to get a debit card</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link i" href="{% url 'transaction' %}">Online Banking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Mobile Banking Resources</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Account Security</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link i" href="#">Password Setup</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                   <div class="col-md-3"> <!--Column 3-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Additional Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Protection</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Insurance</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link i" href="#">Redeem points</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link i" href="#">Offers</a>
+                    </li>
+
+                  </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </li>
+
+
+
+                     <!-- Catagory 3-->
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle catogary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
+    padding-right: 30px;
+  ">              Mortgage Servicing
+            </a>
+
+                    <!--Div for catogary 3-->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="container">
+                <div class="row"> <!--Row 1-->
+                  <div class="col-md-3">  <!--Column 1-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Assistance Options</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link i" href="#">Financial hardship Mortgage</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Quick loans</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Enterprise mortgage</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                  <div class="col-md-3"> <!--Column 2-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Personal Loan Resources</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link i" href="#">When to Choose an Unsecured Loan</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Loan FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">The Benefits of Having an ODLOC</a>
+                    </li>
+                  </ul>
+                  </div>
+                  </div>
+
+
+                     <!-- Catagory 4-->
+    <li class="nav-item dropdown">
+
+      <a class="nav-link dropdown-toggle catogary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
+padding-right: 30px;
+">             Commercial            </a>
+
+                    <!--Div for catogary 4-->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="container">
+                <div class="row"> <!--Row 1-->
+                  <div class="col-md-3">  <!--Column 1-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Commercial Insights</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link i" href="#">Treasury Management</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Global Banking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Financing Executive Insights</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                  <div class="col-md-3"> <!--Column 2-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Commercial capabilities</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link i" href="#">Working Capital Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Solutions Capital</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Markets Commercial</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                 <div class="col-md-3">  <!--Column 3-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Real Estate</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link i" href="#">Government Banking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Industry Banking Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Find a consultant</a>
+                    </li>
+                  </ul>
+                  </div>
+
+                   <div class="col-md-3">  <!--Column 4-->
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Global Capabilities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">International Desk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">International Trade Finance </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link i" href="#">Foreign Exchange</a>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+        </ul>
+
+        <!--Search-->
+        <form class="form-inline">
+          <input class="form-control srch" type="search" placeholder="Search" style="border-radius: 20px;" aria-label="Search">
+        </form>
+
+
+      </div>
+
+    </nav>
+    <!-- Header Ends -->
+    <!-- Intro Starts -->
+    <div class="d-flex flex-direction-column flex-direction-md-row flex-wrap flex-wrap-md-nowrap">
+      <div id="introduction" class="container-fluid-md  w-md-50 order-md-3 overflow-hidden" style="">
+        <div id="intro-img-holder" class="col-12 row justify-content-center m-0 p-0">
+          <img id="intro-img" class="img-fluid" src="{% static 'images/bankapp.png' %}" alt="intro img">
+        </div>
+
+      </div>
+      <div class="container-md w-md-50 d-md-flex justify-content-center align-items-center flex-column">
+        <div class="col-md-10 offset-md-1 col-xl-8 offset-xl-0 double-gutter-md-left-padding ">
+        <h2 id="business-tagline"  class="text-center text-md-left">Next generation digital banking</h2>
+        <p class="text-center  text-md-left color-grayish-blue">Take your financial life online. Your Sterling account will be a one-stop-shop
+          for spending, saving, budgeting, investing, and much more.</p>
+        <button id="request-invite-btn" type="button" class="btn btn-lg rounded-pill text-white bg-red-blue ml-auto mr-auto ml-md-0 mr-md-0 request-btns">Sign Up</button>
+          </div>
+      </div>
+    </div>
+    <div class="row" style="text-align: -webkit-center;">
+        <div class="col-lg-4">
+          <img src="{% static 'images/piggy-bank.png' %}" style="height:80px;width:auto;">
+          <h2 class="fw-normal">Savings Account</h2>
+          <p>Whether you want to save for a rainy day, or have a specific savings goal in mind, we make saving your money easy and convenient.</p>
+          <p><a class="btn btn-secondary" href="#" style="background-color:#2D314D;">Get Started &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+<img src="{% static 'images/cheque.png' %}" style="height:80px;width:auto;">
+          <h2 class="fw-normal">Checking Account</h2>
+          <p>Choose from a variety of options from everyday checking to our most exclusive checking account with premium benefits.</p>
+          <p><a class="btn btn-secondary" href="#" style="background-color:#2D314D;">Get Started &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{% static 'images/salary.png' %}" style="height:80px;width:auto;">
+
+          <h2 class="fw-normal">Recurring Deposit Account</h2>
+          <p>Earn interest and build up savings with a monthly deposit offering the best and most reliable returns </p>
+          <p><a class="btn btn-secondary" href="#" style="background-color:#2D314D;">Get Started &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">The best financial tools and advice <span class="text-muted">for every need.</span></h2>
+        <p class="lead">Simple and secure personal banking available in person, online, or on your device</p>
+        <p><a class="btn btn-secondary" href="#" style="background-color:#2D314D;">Open account &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static 'images/card-mobile.png' %}" style="height:500px;width:500px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Get the funds you need <span class="text-muted">when you need it.</span></h2>
+        <p class="lead">Fund needed renovations, emergencies, or consolidate debt with our competitive rates, flexible terms, and no required collateral.</p>
+        <p><a class="btn btn-secondary" href="#" style="background-color:#2D314D;">Apply for a loan &raquo;</a></p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{% static 'images/Business-Online-Banking.jpg' %}" style="height:500px;width:500px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Let's talk about the future of your small business, <span class="text-muted">and all the possibilities.</span></h2>
+        <p class="lead">Discover better ways to deposit funds and make payments when and how you want. We’re expanding our small business lending to make it easier for entrepreneurs like you to access the funds you need.</p>
+        <p><a class="btn btn-secondary" href="#" style="background-color:#2D314D;">Learn more &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static 'images/Personal_Banking.jpg' %}" style="height:500px;width:500px;">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+    <div id="articles" class="container-md">
+      <div id="articles-holder" class="col-md-10 offset-md-1 d-sm-flex justify-content-sm-center align-items-sm-start flex-sm-wrap">
+        <h2 class="text-center text-md-left mt-0 pt-5 w-100 gutter-md-left-padding">Financial advice to reach your goals faster
+</h2>
+        <div class="w-100"></div>
+        <div class="col-12 d-sm-flex flex-sm-wrap flex-lg-nowrap">
+           <div class="article-card article-card-odd col-sm-6 col-lg-3 row justify-content-center align-items-center flex-direction-column rounded-lg shadow-lg overflow-hidden">
+        <img src="https://i.ibb.co/LhdXbJp/moneybank.jpg" alt="currency img" class="img-fluid">
+        <div class="article-card-text text-center">
+          <p class="pt-3 w-100 text-left author-name color-grayish-blue">By Claire Robinson</p>
+          <h5 class="text-left">Receive money in any currency with no fees</h5>
+          <p class="article-details text-left color-grayish-blue">The world is getting smaller and we’re becoming more mobile. So why should you be
+            forced to only receive money in a single …</p>
+        </div>
+
+      </div>
+
+      <div class="article-card article-card-even col-sm-6 col-lg-3 row justify-content-center align-items-center flex-direction-column rounded-lg shadow-lg overflow-hidden">
+        <img src="https://i.ibb.co/q5xMLBG/image-restaurant.jpg" alt="restaurant img" class="img-fluid">
+        <div class="article-card-text text-center">
+          <p class="pt-3 w-100 text-left author-name color-grayish-blue">By Wilson Hutton</p>
+          <h5 class="text-left">Treat yourself without worrying about money</h5>
+          <p class="article-details text-left color-grayish-blue">Our simple budgeting feature allows you to separate out your spending and set
+            realistic limits each month. That means you …</p>
+        </div>
+
+      </div>
+
+      <div class="article-card article-card-odd col-sm-6 col-lg-3 row justify-content-center align-items-center flex-direction-column rounded-lg shadow-lg overflow-hidden">
+        <img src="https://i.ibb.co/gPfg9VK/image-plane.jpg" alt="plane img" class="img-fluid">
+        <div class="article-card-text text-center">
+          <p class="pt-3 w-100 text-left author-name color-grayish-blue">By James Barls</p>
+          <h5 class="text-left">Take your card wherever you go</h5>
+          <p class="article-details text-left color-grayish-blue">We want you to enjoy your travels. This is why we don’t charge any fees on purchases
+            while you’re abroad. We’ll even show you …</p>
+        </div>
+
+      </div>
+
+      <div class="article-card article-card-even col-sm-6 col-lg-3 row justify-content-center align-items-center flex-direction-column rounded-lg shadow-lg overflow-hidden">
+        <img src="https://i.ibb.co/NrnzGvx/image-confetti.jpg" alt="plane img" class="img-fluid">
+        <div class="article-card-text text-center">
+          <p class="pt-3 w-100 text-left author-name color-grayish-blue">By John Crusoe</p>
+          <h5 class="text-left">Our invite-only Beta accounts are now live!</h5>
+          <p class="article-details text-left color-grayish-blue">After a lot of hard work by the whole team, we’re excited to launch our closed beta.
+            It’s easy to request an invite through the site ...</p>
+        </div>
+
+      </div>
+
+          </div>
+
+        </div>
+
+    </div>
+
+</main>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <footer class="w-100 row justify-content-center align-items-center flex-direction-column pt-3 pt-md-5 pb-md-3 m-0 pr-md-3 pr-lg-0">
+        <div class="col-md-12 col-lg-10 offset-lg-1 d-md-flex m-0 p-md-0">
+        <div class=" col-12 col-md-7 d-md-flex">
+          <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center  justify-content-md-start align-items-md-start flex-md-column double-gutter-md-left-padding">
+              <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
+          <img src="{% static 'images/banklogo.png' %}" style="height:110px;padding-right:40px;">
+        <div class="w-100"></div>
+        <div id="social-media-icons" class="w-xs-50 w-md-85 pt-3 row justify-content-around align-items-center flex-md-nowrap">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-youtube-square"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+          </div>
+           <div class="col-md-3">
+              <div class="w-100 row justify-content-center align-items-center flex-direction-column">
+          <a href="#" class="footer-link">About Us</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">Blog</a>
+        </div>
+          </div>
+           <div class="col-md-3">
+              <div class="w-100 row justify-content-center align-items-center flex-direction-column">
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Support</a>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 p-md-0">
+        <p id="copyright-text" class="text-center text-md-right color-grayish-blue" style="padding-top:70px;">© Sterling Bank. All Rights Reserved</p>
+        </div>
+      </div>
+  </body>
+</html>
